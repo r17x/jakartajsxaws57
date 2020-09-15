@@ -1,0 +1,250 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+import { Appear, Image, Box } from 'mdx-deck'
+import { github, vsDark } from "@code-surfer/themes";
+
+
+export const theme = vsDark;
+
+### #57 JakartaJS x AWS  
+#### Online Series #1: Data Fetch with React.Suspense
+
+15 Sept 2020 - [@ri7nz](https://github.com/ri7nz) 
+
+---
+
+### Hi, saya [R Adysurya A](https://github.com/ri7nz) 👋
+
+<ul>
+    <Appear>
+        <li> Software Engineer, Frontend </li>
+        <li> Meng-GILA-i `Teknologi Web` </li>
+        <li> ❤️ ⚛️ Suka "B E R E A K S I"</li>
+    </Appear>
+</ul>
+
+---
+
+### Apa yang saya bahas ?
+
+<ul>
+    <Appear>
+        <li>Data Fetch</li>
+        <li>Tentang <code>React.Suspense</code></li>
+    </Appear>
+</ul>
+
+---
+
+### Apa yang TIDAK saya bahas ? 
+
+<ul>
+    <Appear>
+        <li>Dasar - dasar <code>React</code></li>
+        <li>Cara "konek API" saya, gimana gan</li>
+    </Appear>
+</ul>
+
+---
+
+<h4> Apa itu "Data Fetch" ? </h4>
+
+---
+
+<h4> Apa itu "Data Fetch" ? </h4>
+
+<ul>
+    <Appear>
+        <li>Meminta sumber daya <strong>(Resource)</strong> melalui jaringan</li>
+        <li> <strong> (Over the network)</strong></li>
+        <li> <strong>Data</strong> dari <strong> "LUAR" (STATE)</strong> </li>
+        <li> <strong>"LUAR"</strong> banyak <strong>EFEK SAMPING (React.useEffect)</strong></li>
+    </Appear>
+</ul>
+
+---
+
+<h4> Apa itu "Suspense" ? </h4>
+
+<ul>
+    <Appear>
+        <li> API: <strong>React.Suspense</strong> </li>
+        <li> Cara: <strong>Deklaratif</strong> menunggu apapun, termasuk <strong>"DATA"</strong> </li>
+        <li> Cara: <strong>Berkompromi</strong> dengan <strong> Async Data </strong> </li>
+    </Appear>
+</ul>
+
+---
+
+<h4> Fetch in React ? </h4>
+
+<ul>
+    <Appear>
+        <li> Fetch on Render or Fetch then Render </li>
+        <li> Fetch with Suspense </li>
+    </Appear>
+</ul>
+
+---
+
+### Fetch on Render
+
+---
+
+<h4> Fetch on Render </h4>
+
+<ul>
+    <Appear>
+        <li> Memulai <i><strong>Fetching</strong></i> </li>
+        <li> Finish <i><strong>Fetching</strong></i> </li>
+        <li> Memulai <i><strong>Rendering</strong></i> </li>
+    </Appear>
+</ul>
+
+---
+
+<CodeSurferColumns>
+
+<Step  subtitle="Github User: ri7nz">
+
+```js 2:33 file=./ri7nz.json
+```
+
+</Step>
+
+<Step>
+
+```js file=./a-github-user.js
+```
+
+</Step>
+
+<Step title="deklarasi STATE user">
+
+```js 2 file=./a-github-user.js
+```
+
+</Step>
+
+<Step title="efek samping">
+
+```js 4:6 file=./a-github-user.js
+```
+
+</Step>
+
+<Step title="handle STATE `user`">
+
+```js 8:10 file=./a-github-user.js
+```
+
+</Step>
+
+<Step title="REnder Komponen">
+
+```js 12:17 file=./a-github-user.js
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+### Fetch with Suspense
+
+---
+
+<h4> Fetch with Suspense </h4>
+
+<ul>
+    <Appear>
+        <li> Memulai <i><strong>Fetching</strong></i> </li>
+        <li> Memulai <i><strong>Rendering</strong></i> </li>
+        <li> Finish <i><strong>Fetching</strong></i> </li>
+    </Appear>
+</ul>
+
+---
+
+<CodeSurferColumns>
+
+<Step>
+    <li> <a href="https://codesandbox.io/s/frosty-hermann-bztrp"> Resmi: Dari Dokumentasi React </a> </li>
+</Step>
+
+<Step>
+
+```js file=./hoc-integration-suspense.js
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<h4> Pustaka yang mendukung React.Suspense </h4>
+
+<ul style={{listStyle: "none"}}>
+<Appear>
+
+<li style={{display: "flex", flexDirection: "row"}} > <Image
+    src={"https://recoiljs.org/img/favicon.ico"}
+    alt="Recoiljs"
+    style={{width: "50px", height: "50px", marginRight: "5px" }}
+/> RecoilJs </li>
+
+<li style={{display: "flex", flexDirection: "row"}} >
+<Image
+    src={"https://relay.dev/img/favicon.png"}
+    alt="Relayjs"
+    style={{width: "50px", height: "50px"}}
+/> RelayJs
+</li>
+
+<li> Mungkin, yang bawah bisa beritahu Gan!</li>
+
+</Appear>
+</ul>
+
+---
+
+### Tips 
+
+<ul>
+    <Appear>
+        <li>Lanjut di Slide selanjutnya</li>
+    </Appear>
+</ul>
+
+---
+
+
+## DEMO 🥳
+
+---
+
+### Kesimpulan
+
+* Suspense: **handle data** or split **component** (React.lazy)
+* Memisahkan **"Async Data"** dengan **"UI"** (Komponen)
+* Setiap **"State"** dapat diprediksi dengan **baik**  
+* DX yang cukup baik (fetch + UI component)
+
+---
+
+## Referensi
+
+* [Lurd Dan Abramov: Suspense Example](https://codesandbox.io/s/frosty-hermann-bztrp)
+* [React Suspense Fundamental by Ken C. Dodds](https://egghead.io/lessons/react-learn-fundamentals-of-react-suspense)
+* [Concurrent Mode: Suspense - EXPERIMENTAL](https://reactjs.org/docs/concurrent-mode-suspense.html)
+
+---
+
+## THANK YOU 👐
+
+[@ri7nz - 🕸️ rin.rocks](https://rin.rocks)
